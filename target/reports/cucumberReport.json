@@ -1,0 +1,94 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# language: pt"
+      }
+    ],
+    "line": 4,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Logar na OrangeHRM",
+        "description": "",
+        "id": "acessar-o-site-da-orangehrm-e-logar-com-sucesso;logar-na-orangehrm",
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7926123300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "que acesso o site da OrangeHRM",
+            "match": {
+              "location": "LoginSucessSteps.que_acesso_o_site_da_OrangeHRM()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 61439500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "preencho o campo username",
+            "match": {
+              "location": "LoginSucessSteps.preencho_o_campo_username()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 104936900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "preencho o campo password",
+            "match": {
+              "location": "LoginSucessSteps.preencho_o_campo_password()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 53877000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "clico no botão Login",
+            "match": {
+              "location": "LoginSucessSteps.clico_no_botão_Login()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1896841100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "deverá ser aberta a tela de Dashboard",
+            "match": {
+              "location": "LoginSucessSteps.deverá_ser_aberta_a_tela_de_Dashboard()"
+            },
+            "keyword": "Então "
+          }
+        ]
+      }
+    ],
+    "name": "Acessar o site da orangeHRM e logar com sucesso",
+    "description": "",
+    "id": "acessar-o-site-da-orangehrm-e-logar-com-sucesso",
+    "keyword": "Funcionalidade",
+    "uri": "LoginSucess.feature",
+    "tags": [
+      {
+        "line": 3,
+        "name": "@LoginSucess"
+      }
+    ]
+  }
+]
