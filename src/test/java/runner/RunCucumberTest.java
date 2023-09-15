@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 @CucumberOptions(
         plugin = {"json:target/reports/cucumberReport.json", "html:target/reports/"},
         features = "D:\\Automação\\Selenium\\SeleniumTestsOrangeHRM\\src\\test\\java\\resources\\features",
-        tags = {"@LoginSucess"},
+        tags = {"@~ignore"},
         glue = {"steps"}
 )
 
