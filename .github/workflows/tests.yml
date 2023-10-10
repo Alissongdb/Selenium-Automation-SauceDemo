@@ -3,23 +3,20 @@ name: Selenium Tests
 on:
   push:
     branches:
-      - main  # Substitua pelo nome da sua branch principal
+      - main
 
 jobs:
   selenium-tests:
-    runs-on: ubuntu-latest  # Pode escolher outro sistema operacional, se preferir
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout código
         uses: actions/checkout@v2
-        with:
-          runs-on: ubuntu-latest  # Especifique o ambiente de execução
 
       - name: Configurar ambiente Java
         uses: actions/setup-java@v2
         with:
           java-version: 11
-          distribution: 'adopt'
 
       - name: Instalar o Maven
         run: |
