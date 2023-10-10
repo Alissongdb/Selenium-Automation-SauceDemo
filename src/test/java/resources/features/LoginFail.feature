@@ -1,12 +1,11 @@
 # language: pt
 
-  @LoginFail
-  Funcionalidade: Erro ao acessar o site da orangeHRM
+@LoginFail
+Funcionalidade: Acessar o site da SauceDemo e logar com falha
 
-  Cenario: Não logar na OrangeHRM
-
-    Dado que eu acesso o site da OrangeHRM
-    E eu preencho o campo username incorretamente
+  Cenario: Logar na SauceDemo com falha
+    Dado que eu acesso o site da SauceDemo
+    E eu preencho o campo username
     E eu preencho o campo password incorretamente
-    Quando eu clico no botão Login
-    Então deverá ser apresentada para mim a mensagem de credenciais inválidas
+    E clico no botão Login
+    Então deverá ser apresentada uma mensagem de bloqueio

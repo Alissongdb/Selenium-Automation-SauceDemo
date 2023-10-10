@@ -10,8 +10,8 @@ public class LoginSucessSteps extends Utils {
 
     LoginPageSucess loginPageSucess = new LoginPageSucess(driver);
 
-    @Dado("^que acesso o site da OrangeHRM$")
-    public void que_acesso_o_site_da_OrangeHRM()  {
+    @Dado("^que acesso o site da SauceDemo$")
+    public void que_acesso_o_site_da_SauceDemo()  {
 
         loginPageSucess.accessWebsite();
 
@@ -35,8 +35,8 @@ public class LoginSucessSteps extends Utils {
         loginPageSucess.loginButtonClick();
     }
 
-    @Então("^deverá ser aberta a tela de Dashboard$")
-    public void deverá_ser_aberta_a_tela_de_Dashboard() {
+    @Então("^deverá ser aberta a homePage da SauceDemo$")
+    public void deverá_ser_aberta_a_homePage_da_SauceDemo() {
 
         loginPageSucess.loginSuccess();
 

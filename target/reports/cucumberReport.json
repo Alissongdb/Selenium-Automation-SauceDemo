@@ -10,51 +10,51 @@
     "elements": [
       {
         "line": 6,
-        "name": "Logar na OrangeHRM",
+        "name": "Logar na SauceDemo com falha",
         "description": "",
-        "id": "acessar-o-site-da-orangehrm-e-logar-com-sucesso;logar-na-orangehrm",
+        "id": "acessar-o-site-da-saucedemo-e-logar-com-falha;logar-na-saucedemo-com-falha",
         "type": "scenario",
         "keyword": "Cenario",
         "steps": [
           {
             "result": {
-              "duration": 7926123300,
+              "duration": 793888700,
               "status": "passed"
             },
             "line": 7,
-            "name": "que acesso o site da OrangeHRM",
+            "name": "que eu acesso o site da SauceDemo",
             "match": {
-              "location": "LoginSucessSteps.que_acesso_o_site_da_OrangeHRM()"
+              "location": "LoginPageFailSteps.que_acesso_o_site_da_SauceDemo()"
             },
             "keyword": "Dado "
           },
           {
             "result": {
-              "duration": 61439500,
+              "duration": 123212700,
               "status": "passed"
             },
             "line": 8,
-            "name": "preencho o campo username",
+            "name": "eu preencho o campo username",
             "match": {
-              "location": "LoginSucessSteps.preencho_o_campo_username()"
+              "location": "LoginPageFailSteps.preencho_o_campo_username()"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "duration": 104936900,
+              "duration": 72037300,
               "status": "passed"
             },
             "line": 9,
-            "name": "preencho o campo password",
+            "name": "eu preencho o campo password incorretamente",
             "match": {
-              "location": "LoginSucessSteps.preencho_o_campo_password()"
+              "location": "LoginPageFailSteps.preencho_o_campo_password_incorretamente()"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "duration": 53877000,
+              "duration": 73197500,
               "status": "passed"
             },
             "line": 10,
@@ -62,32 +62,32 @@
             "match": {
               "location": "LoginSucessSteps.clico_no_botão_Login()"
             },
-            "keyword": "Quando "
+            "keyword": "E "
           },
           {
             "result": {
-              "duration": 1896841100,
+              "duration": 99401500,
               "status": "passed"
             },
             "line": 11,
-            "name": "deverá ser aberta a tela de Dashboard",
+            "name": "deverá ser apresentada uma mensagem de bloqueio",
             "match": {
-              "location": "LoginSucessSteps.deverá_ser_aberta_a_tela_de_Dashboard()"
+              "location": "LoginPageFailSteps.deverá_ser_apresentada_uma_mensagem_de_bloqueio()"
             },
             "keyword": "Então "
           }
         ]
       }
     ],
-    "name": "Acessar o site da orangeHRM e logar com sucesso",
+    "name": "Acessar o site da SauceDemo e logar com falha",
     "description": "",
-    "id": "acessar-o-site-da-orangehrm-e-logar-com-sucesso",
+    "id": "acessar-o-site-da-saucedemo-e-logar-com-falha",
     "keyword": "Funcionalidade",
-    "uri": "LoginSucess.feature",
+    "uri": "LoginFail.feature",
     "tags": [
       {
         "line": 3,
-        "name": "@LoginSucess"
+        "name": "@LoginFail"
       }
     ]
   }

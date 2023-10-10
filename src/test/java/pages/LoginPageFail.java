@@ -7,44 +7,47 @@ import org.openqa.selenium.WebElement;
 import support.Utils;
 
 public class LoginPageFail extends Utils {
-
-    private String usernameFail = "Adminn";
-    private String passwordFail = "admin1234";
-
+    private String username = "standard_user";
+    private String password = "senhaInvalida";
     WebDriver driver;
-
     public LoginPageFail(WebDriver driver) {
         this.driver = driver;
     }
 
     public void accessWebsite() {
 
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-        waitElementBePresent(By.name("username"), 10);
-        Assert.assertEquals(true, driver.findElement(By.name("username")).isDisplayed());
+        driver.get("https://www.saucedemo.com/");
+        waitElementBePresent(By.className("login_logo"), 10);
+        Assert.assertEquals(true, driver.findElement(By.className("login_logo")).isDisplayed());
     }
 
-    public void fillFieldUsernameFail() {
+    public void fillFieldUserName() {
 
-        driver.findElement(By.name("username")).sendKeys(usernameFail);
+        driver.findElement(By.id("user-name")).sendKeys(username);
+
     }
 
-    public void fillFieldPasswordFail() {
+    public void fillFieldPassword() {
 
-        driver.findElement(By.name("password")).sendKeys(passwordFail);
+        driver.findElement(By.id("password")).sendKeys(password);
     }
 
     public void loginButtonClick() {
 
-        driver.findElement(By.cssSelector("#app > div.orangehrm-login-layout > div > div.orangehrm-login-container > div > div.orangehrm-login-slot > div.orangehrm-login-form > form > div.oxd-form-actions.orangehrm-login-action > button")).click();
+        WebElement buttonLoginClick = driver.findElement(By.id("login-button"));
+        buttonLoginClick.click();
     }
 
     public void loginFail() {
 
-        waitElementBePresent(By.cssSelector("#app > div.orangehrm-login-layout > div > div.orangehrm-login-container > div > div.orangehrm-login-slot > div.orangehrm-login-form > div > div.oxd-alert.oxd-alert--error > div.oxd-alert-content.oxd-alert-content--error > p"), 10);
-        WebElement element =  driver.findElement(By.cssSelector("#app > div.orangehrm-login-layout > div > div.orangehrm-login-container > div > div.orangehrm-login-slot > div.orangehrm-login-form > div > div.oxd-alert.oxd-alert--error > div.oxd-alert-content.oxd-alert-content--error > p"));
-        boolean elementVisible = element.isDisplayed();
-        System.out.println("O elemento está visivel " + elementVisible);
+        waitElementBePresent(By.className("error-button"), 10);
+        WebElement msgError = driver.findElement(By.className("error-button"));
+
+        // Validando que o elemento está visível apontando o assert para uma variável
+        String msgValidacao = String.valueOf(msgError.isDisplayed());
+        System.out.println("O elemento msgErro está visível - " + msgValidacao);
     }
+
+
 
 }

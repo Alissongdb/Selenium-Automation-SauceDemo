@@ -11,8 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"json:target/reports/cucumberReport.json", "html:target/reports/"},
-        features = "D:\\Automação\\Selenium\\SeleniumTestsOrangeHRM\\src\\test\\java\\resources\\features",
-        tags = {"@~ignore"},
+        features = "D:\\Automação\\Selenium\\SeleniumTestsSauceDemo\\src\\test\\java\\resources\\features",
+        tags = {"@LoginFail"},
         glue = {"steps"}
 )
 
@@ -24,7 +24,7 @@ public class RunCucumberTest {
     public static void start() {
 
         driver = new ChromeDriver();
-        driver.manage().window().maximize();
+
 
     }
 

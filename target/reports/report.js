@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("LoginSucess.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("LoginFail.feature");
 formatter.feature({
   "comments": [
     {
@@ -7,83 +7,83 @@ formatter.feature({
     }
   ],
   "line": 4,
-  "name": "Acessar o site da orangeHRM e logar com sucesso",
+  "name": "Acessar o site da SauceDemo e logar com falha",
   "description": "",
-  "id": "acessar-o-site-da-orangehrm-e-logar-com-sucesso",
+  "id": "acessar-o-site-da-saucedemo-e-logar-com-falha",
   "keyword": "Funcionalidade",
   "tags": [
     {
       "line": 3,
-      "name": "@LoginSucess"
+      "name": "@LoginFail"
     }
   ]
 });
 formatter.scenario({
   "line": 6,
-  "name": "Logar na OrangeHRM",
+  "name": "Logar na SauceDemo com falha",
   "description": "",
-  "id": "acessar-o-site-da-orangehrm-e-logar-com-sucesso;logar-na-orangehrm",
+  "id": "acessar-o-site-da-saucedemo-e-logar-com-falha;logar-na-saucedemo-com-falha",
   "type": "scenario",
   "keyword": "Cenario"
 });
 formatter.step({
   "line": 7,
-  "name": "que acesso o site da OrangeHRM",
+  "name": "que eu acesso o site da SauceDemo",
   "keyword": "Dado "
 });
 formatter.step({
   "line": 8,
-  "name": "preencho o campo username",
+  "name": "eu preencho o campo username",
   "keyword": "E "
 });
 formatter.step({
   "line": 9,
-  "name": "preencho o campo password",
+  "name": "eu preencho o campo password incorretamente",
   "keyword": "E "
 });
 formatter.step({
   "line": 10,
   "name": "clico no botão Login",
-  "keyword": "Quando "
+  "keyword": "E "
 });
 formatter.step({
   "line": 11,
-  "name": "deverá ser aberta a tela de Dashboard",
+  "name": "deverá ser apresentada uma mensagem de bloqueio",
   "keyword": "Então "
 });
 formatter.match({
-  "location": "LoginSucessSteps.que_acesso_o_site_da_OrangeHRM()"
+  "location": "LoginPageFailSteps.que_acesso_o_site_da_SauceDemo()"
 });
 formatter.result({
-  "duration": 7926123300,
+  "duration": 793888700,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginSucessSteps.preencho_o_campo_username()"
+  "location": "LoginPageFailSteps.preencho_o_campo_username()"
 });
 formatter.result({
-  "duration": 61439500,
+  "duration": 123212700,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginSucessSteps.preencho_o_campo_password()"
+  "location": "LoginPageFailSteps.preencho_o_campo_password_incorretamente()"
 });
 formatter.result({
-  "duration": 104936900,
+  "duration": 72037300,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSucessSteps.clico_no_botão_Login()"
 });
 formatter.result({
-  "duration": 53877000,
+  "duration": 73197500,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginSucessSteps.deverá_ser_aberta_a_tela_de_Dashboard()"
+  "location": "LoginPageFailSteps.deverá_ser_apresentada_uma_mensagem_de_bloqueio()"
 });
 formatter.result({
-  "duration": 1896841100,
+  "duration": 99401500,
   "status": "passed"
 });
 });
