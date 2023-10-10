@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout código
         uses: actions/checkout@v2
+        with:
+          runs-on: ubuntu-latest  # Especifique o ambiente de execução
 
       - name: Configurar ambiente Java
         uses: actions/setup-java@v2
