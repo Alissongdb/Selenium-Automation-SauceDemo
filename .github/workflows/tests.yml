@@ -19,11 +19,6 @@ jobs:
           java-version: 11
           distribution: "adopt"
 
-      - name: Instalar o Maven
-        run: |
-          sudo apt-get update
-          sudo apt-get install maven
-
       - name: Instalar o ChromeDriver
         run: |
           LATEST=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
