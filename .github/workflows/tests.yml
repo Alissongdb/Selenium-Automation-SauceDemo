@@ -32,8 +32,5 @@ jobs:
           sudo mv chromedriver /usr/local/bin
           rm chromedriver_linux64.zip
 
-      - name: Instalar as dependências do Maven
-        run: mvn clean install -DskipTests
-
       - name: Executar os Testes Selenium
         run: mvn test
