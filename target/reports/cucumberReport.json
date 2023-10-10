@@ -18,7 +18,7 @@
         "steps": [
           {
             "result": {
-              "duration": 793888700,
+              "duration": 664447100,
               "status": "passed"
             },
             "line": 7,
@@ -30,7 +30,7 @@
           },
           {
             "result": {
-              "duration": 123212700,
+              "duration": 130911300,
               "status": "passed"
             },
             "line": 8,
@@ -42,7 +42,7 @@
           },
           {
             "result": {
-              "duration": 72037300,
+              "duration": 79407900,
               "status": "passed"
             },
             "line": 9,
@@ -54,7 +54,7 @@
           },
           {
             "result": {
-              "duration": 73197500,
+              "duration": 80543800,
               "status": "passed"
             },
             "line": 10,
@@ -66,7 +66,7 @@
           },
           {
             "result": {
-              "duration": 99401500,
+              "duration": 107179800,
               "status": "passed"
             },
             "line": 11,
@@ -88,6 +88,98 @@
       {
         "line": 3,
         "name": "@LoginFail"
+      }
+    ]
+  },
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# language: pt"
+      }
+    ],
+    "line": 4,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Logar na SauceDemo",
+        "description": "",
+        "id": "acessar-o-site-da-saucedemo-e-logar-com-sucesso;logar-na-saucedemo",
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 193520000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "que acesso o site da SauceDemo",
+            "match": {
+              "location": "LoginSucessSteps.que_acesso_o_site_da_SauceDemo()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 87482400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "preencho o campo username",
+            "match": {
+              "location": "LoginSucessSteps.preencho_o_campo_username()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 75890400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "preencho o campo password",
+            "match": {
+              "location": "LoginSucessSteps.preencho_o_campo_password()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 108560200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "clico no botão Login",
+            "match": {
+              "location": "LoginSucessSteps.clico_no_botão_Login()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 101690400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "deverá ser aberta a homePage da SauceDemo",
+            "match": {
+              "location": "LoginSucessSteps.deverá_ser_aberta_a_homePage_da_SauceDemo()"
+            },
+            "keyword": "Então "
+          }
+        ]
+      }
+    ],
+    "name": "Acessar o site da SauceDemo e logar com sucesso",
+    "description": "",
+    "id": "acessar-o-site-da-saucedemo-e-logar-com-sucesso",
+    "keyword": "Funcionalidade",
+    "uri": "LoginSucess.feature",
+    "tags": [
+      {
+        "line": 3,
+        "name": "@LoginSucess"
       }
     ]
   }
