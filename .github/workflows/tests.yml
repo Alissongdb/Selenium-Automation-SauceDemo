@@ -1,27 +1,38 @@
 name: Selenium Tests
 
 on:
-  pull_request:
-    branches: [main]
   push:
-      branches: [main]
+    branches:
+      - main  # Substitua pelo nome da sua branch principal
 
 jobs:
-  RunTest:
-    runs-on: ubuntu-latest
+  selenium-tests:
+    runs-on: ubuntu-latest  # Pode escolher outro sistema operacional, se preferir
 
     steps:
       - name: Checkout código
-        uses: actions/checkout@v2  # Corrigir a referência ao repositório de ações
+        uses: actions/checkout@v2
 
       - name: Configurar ambiente Java
-        uses: actions/setup-java@v2  # Corrigir a referência ao repositório de ações
+        uses: actions/setup-java@v2
         with:
           java-version: 11
-          distribution: 'adopt'
 
-      - name: Instalar Chrome
-        uses: browser-actions/setup-chrome@latest
-          
-      - name: Run Test
+      - name: Instalar o Maven
+        run: |
+          sudo apt-get update
+          sudo apt-get install maven
+
+      - name: Instalar o ChromeDriver
+        run: |
+          LATEST=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+          wget http://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip
+          sudo mv chromedriver /usr/local/bin
+          rm chromedriver_linux64.zip
+
+      - name: Instalar as dependências do Maven
+        run: mvn clean install -DskipTests
+
+      - name: Executar os Testes Selenium
         run: mvn test
