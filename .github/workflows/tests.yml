@@ -18,6 +18,7 @@ jobs:
         uses: actions/setup-java@v2  # Corrigir a referência ao repositório de ações
         with:
           java-version: 11
+          distribution: 'adopt'
 
       - name: Instalar Chrome
         uses: browser-actions/setup-chrome@latest
