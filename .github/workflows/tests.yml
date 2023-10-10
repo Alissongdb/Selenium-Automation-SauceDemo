@@ -33,7 +33,7 @@ jobs:
           rm chromedriver_linux64.zip
 
       - name: Instalar as dependências do Maven
-        run: sudo mvn -Dtest=PerfLatency#latencyTest test -X
+        run: mvn clean package -DskipTests
 
       - name: Executar os Testes Selenium
         run: mvn test
