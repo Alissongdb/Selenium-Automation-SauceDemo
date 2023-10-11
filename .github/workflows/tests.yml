@@ -14,9 +14,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16
+        run: |
+          node_version=16
+          curl -sL https://deb.nodesource.com/setup_$node_version.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+        env:
+          node_version: 16
 
       - name: Configurar ambiente Java
         uses: actions/setup-java@v2
