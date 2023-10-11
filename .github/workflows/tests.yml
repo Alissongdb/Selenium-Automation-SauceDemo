@@ -24,16 +24,15 @@ jobs:
         env:
           node_version: 16
 
-      - name: Use GitHub Actions with Node.js
-        uses: actions/setup-node@v2
-        with:
+      - name: Install GitHub Actions for Node.js
+        run: npm install -g actions/setup-node@v2
+        env:
           node-version: 16
 
-      - name: Use GitHub Actions with Java
-        uses: actions/setup-java@v2
-        with:
+      - name: Install GitHub Actions for Java
+        run: npm install -g actions/setup-java@v2
+        env:
           java-version: 11
-          distribution: "adopt"
 
       - name: Instalar o Maven
         run: |
@@ -51,4 +50,5 @@ jobs:
       - name: Instalar as dependências do Maven
         run: mvn clean package -DskipTests
 
-      - name: Exec
+      - name: Executar os Testes Selenium
+        run: mvn -X test
