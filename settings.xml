@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<settings>
-    <localRepository>/caminho/para/repositorio/local</localRepository>
-    <interactiveMode>true</interactiveMode>
-    <offline>false</offline>
-</settings>
+<servers>
+    <!-- Outras configurações de servidor podem estar aqui -->
+</servers>
