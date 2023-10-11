@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clear Cache
-        run: git clean -ffdx
 
       - name: Checkout código
         uses: actions/checkout@v3
