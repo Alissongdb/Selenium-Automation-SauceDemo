@@ -22,15 +22,10 @@ jobs:
         env:
           node_version: 16
 
-      - name: Install GitHub Actions for Node.js
-        run: npm install -g actions/setup-node@v2
-        env:
-          node-version: 16
-
-      - name: Install GitHub Actions for Java
-        run: npm install -g actions/setup-java@v2
-        env:
-          java-version: 11
+      - name: Set up Java
+        run: |
+          sudo apt-get update
+          sudo apt-get install openjdk-11-jdk
 
       - name: Instalar o Maven
         run: |
