@@ -36,4 +36,4 @@ jobs:
         run: mvn clean package -DskipTests
 
       - name: Executar os Testes Selenium
-        run: mvn -X test
+        run: mvn clean install
