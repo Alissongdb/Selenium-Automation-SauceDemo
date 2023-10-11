@@ -11,6 +11,9 @@ jobs:
 
     steps:
 
+      - name: List Test Reports
+        run: ls -R /home/runner/work/Selenium-Automation-SauceDemo/Selenium-Automation-SauceDemo/target/surefire-reports
+
       - name: Checkout código
         uses: actions/checkout@v3
 
