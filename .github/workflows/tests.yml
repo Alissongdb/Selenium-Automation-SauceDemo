@@ -24,6 +24,16 @@ jobs:
         env:
           node_version: 16
 
+      - name: Update All Actions
+        run: |
+          # Atualize todas as ações para suas versões mais recentes
+          # Certifique-se de que todas as ações estejam atualizadas e compatíveis com o Node.js versão 16
+          npm update -g @actions/core
+          npm update -g @actions/checkout
+          npm update -g actions/setup-node
+          npm update -g actions/setup-java
+          # Adicione outras ações que você está usando aqui
+
       - name: Configurar ambiente Java
         uses: actions/setup-java@v2
         with:
